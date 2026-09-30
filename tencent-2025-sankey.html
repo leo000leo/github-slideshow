@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tencent 2025 Sankey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Serif:ital@0;1&family=Noto+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@400&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;   /* white-smoke */
+      --color-ink:     #2d3142;   /* jet-black */
+      --color-muted:   #4f5d75;   /* blue-slate */
+      --color-accent:  #eb6c36;   /* atomic-tangerine */
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', 'Noto Serif KR', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+
+    .frame { max-width: 1320px; width: 100%; }
+    /* The SVG holds its readable width (min-width == the viewBox width, so the
+       type ramp is never silently scaled down). This wrapper lets a narrow
+       screen scroll the diagram instead of the whole page. */
+    .diagram-container { width: 100%; overflow-x: auto; }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+
+    svg { width: 100%; min-width: 1280px; display: block; }
+    /* Paper has no scrollbar, so the local scroller would clip instead of
+       scroll. Let the diagram scale down to the sheet: smaller but whole
+       beats sharp but cut off. Must come after the svg rule above - a media
+       query adds no specificity, so a later plain rule would win. */
+    @media print {
+      .diagram-container { overflow-x: visible; }
+      svg { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Sankey · Tencent FY2025 · RMB bn</p>
+    <h1>Where Tencent&#8217;s RMB751.8bn of 2025 revenue went</h1>
+
+        <div class="diagram-container">
+      <svg viewBox="0 0 1280 780" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="tencent-2025-sankey-title tencent-2025-sankey-desc">
+        <title id="tencent-2025-sankey-title">Tencent 2025 revenue and spending</title>
+        <desc id="tencent-2025-sankey-desc">Sankey diagram of Tencent's RMB751.8bn 2025 revenue from value-added services, fintech and business services, marketing services and others, flowing to cost of revenues, operating expenses, income tax and RMB197.3bn of profit, which net other income lifts to RMB229.8bn.</desc>
+        <rect width="100%" height="100%" fill="#f5f5f5"/>
+        <text x="306" y="76" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.14em">INCOME · SEGMENTS</text><text x="638" y="76" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.14em">REVENUE</text><text x="970" y="76" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.14em">OUTCOME · WHERE IT GOES</text>
+        <path d="M312,112 C472,112 472,148 632,148 L632,384 C472,384 472,348 312,348 Z" fill="rgba(79,93,117,0.18)"/><path d="M312,372 C472,372 472,384 632,384 L632,532 C472,532 472,520 312,520 Z" fill="rgba(79,93,117,0.18)"/><path d="M312,544 C472,544 472,532 632,532 L632,624 C472,624 472,636 312,636 Z" fill="rgba(79,93,117,0.18)"/><path d="M312,660 C472,660 472,624 632,624 L632,628 C472,628 472,664 312,664 Z" fill="rgba(79,93,117,0.18)"/><path d="M644,148 C804,148 804,112 964,112 L964,324 C804,324 804,360 644,360 Z" fill="rgba(79,93,117,0.18)"/><path d="M644,360 C804,360 804,348 964,348 L964,460 C804,460 804,472 644,472 Z" fill="rgba(79,93,117,0.18)"/><path d="M644,472 C804,472 804,484 964,484 L964,516 C804,516 804,504 644,504 Z" fill="rgba(79,93,117,0.18)"/>
+        <path d="M644,504 C804,504 804,540 964,540 L964,664 C804,664 804,628 644,628 Z" fill="rgba(235,108,54,0.28)"/>
+        <rect x="300" y="112" width="12" height="236" fill="#2d3142"/><rect x="300" y="372" width="12" height="148" fill="#2d3142"/><rect x="300" y="544" width="12" height="92" fill="#2d3142"/><rect x="300" y="660" width="12" height="4" fill="#2d3142"/><rect x="632" y="148" width="12" height="480" fill="#2d3142"/><rect x="964" y="112" width="12" height="212" fill="#2d3142"/><rect x="964" y="348" width="12" height="112" fill="#2d3142"/><rect x="964" y="484" width="12" height="32" fill="#2d3142"/><rect x="964" y="540" width="12" height="124" fill="#eb6c36"/>
+        <text x="288" y="219.0" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="end">Value-added services</text><text x="288" y="234.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">RMB369.3bn · 49.1%</text><text x="288" y="247.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">games · social networks</text><text x="288" y="435.0" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="end">FinTech & business services</text><text x="288" y="450.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">RMB229.4bn · 30.5%</text><text x="288" y="463.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">payments · cloud</text><text x="288" y="579.0" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="end">Marketing services</text><text x="288" y="594.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">RMB145.0bn · 19.3%</text><text x="288" y="607.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">advertising</text><text x="288" y="666" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="end">Others</text><text x="288" y="681" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="end">RMB8.1bn · 1.1%</text><text x="638" y="122" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Total revenue</text><text x="638" y="136" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">RMB751.8bn · +14% YoY</text><text x="988" y="214.0" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="start">Cost of revenues</text><text x="988" y="229.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="start">RMB329.2bn · 43.8%</text><text x="988" y="393.0" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="start">Operating expenses</text><text x="988" y="408.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="start">RMB177.8bn · 23.6%</text><text x="988" y="421.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="start">S&M 41.7 · G&A 136.1 (R&D 85.8)</text><text x="988" y="496.0" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="start">Income tax</text><text x="988" y="511.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="start">RMB47.5bn · 6.3%</text><text x="988" y="598.0" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="start">Profit from revenue</text><text x="988" y="613.0" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="start">RMB197.3bn · 26.2%</text>
+        <text x="988" y="684" fill="#2d3142" font-size="14" font-style="italic" font-family="'Instrument Serif', serif">+ RMB32.5bn net other income</text><text x="988" y="702" fill="#2d3142" font-size="14" font-style="italic" font-family="'Instrument Serif', serif">= RMB229.8bn profit for the year</text>
+        <line x1="40" y1="724" x2="1240" y2="724" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/><text x="40" y="756" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.18em">LEGEND</text><rect x="112" y="748" width="16" height="8" fill="rgba(79,93,117,0.18)" stroke="#4f5d75" stroke-width="1"/><text x="136" y="756" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Flow · RMB bn</text><rect x="248" y="748" width="16" height="8" fill="rgba(235,108,54,0.28)" stroke="#eb6c36" stroke-width="1"/><text x="272" y="756" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif">Profit path</text><text x="384" y="756" fill="#4f5d75" font-size="9" font-family="'Geist', sans-serif" font-style="italic">About 26 fen of every yuan of revenue is left as profit before other income.</text><text x="1240" y="756" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="end">SOURCE · TENCENT FY2025 RESULTS (IFRS) · 18 MAR 2026</text>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>
